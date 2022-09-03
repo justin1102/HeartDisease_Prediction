@@ -1,0 +1,230 @@
+<html>
+	<head>
+    <title>Heart Disease Prediction Graph</title> 
+    <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='css/graph.css') }}">
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+			  <span class="logo"><a href="{{ url_for('predict_page') }}">Heart Disease Test</a></span>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+          <li><a href="{{ url_for('graph_page') }}">Graph</a></li>
+          <li class="btn"> <a href="{{ url_for('home') }}">Log Out</a> </li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Graph Distribution</h1>
+    <div class="faq-container">
+      <div class="faq active">
+        <h3 class="faq-title">
+          Age 
+        </h3>
+ 
+        <p class="faq-text">
+          <img src="../static/images/age.jpg" class="center" >
+          Age is the length of time that a person has lived 
+        </p>
+ 
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+ 
+      <div class="faq">
+        <h3 class="faq-title">
+        Chest Pain Type
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/chest_pain_type.jpg" class="center">
+          Chest discomfort that related to a heart problem. It may be caused by lifting heavy weights, anxiety, heartburn, and others. 
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+ 
+      <div class="faq">
+        <h3 class="faq-title">
+          Cholestoral
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/cholestoral.jpg" class="center">
+          Fats substance that made in liver and found in the blood and in cells of the body. 
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+ 
+      <div class="faq">
+        <h3 class="faq-title">
+          Exercise Induced Angina
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/exercise_induced_angina.jpg" class="center">
+          Exercise-induced angina (AP) is a common complaint of cardiac patients, particularly when exercising in the cold.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+ 
+      <div class="faq">
+        <h3 class="faq-title">
+          Fasting Blood Sugar
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/fasting_blood_sugar.jpg" class="center">
+          Total of sugar (glucose) in a blood sample after an overnight test. The normal fasting blood sugar level can be less than 100mg/dL
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          Maximum Heart Rate
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/Max_heart_rate.jpg" class="center">
+          A common formula for calculating maximum heart rate is: MHR = 208 – 0.7 (age) Maximum heart rate, or MHR, is a dynamic process that measures the cumulative number of ventricular contractions or beats per minute in which blood reciprocally flows to and from the heart.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          ST Depression Induced
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/oldpeak.jpg" class="center">
+          St depression induced by exercise relative to rest 
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+          Resting ECG Results
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/rest_ecg.jpg" class="center">
+          The resting ECG can detect certain heart conditions such as hypertrophy of heart, ischemia, myocardial infarction, sequelae of myocardial infarction, cardiac arrhythmias, etc.
+
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          Resting Blood Pressure
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/resting_blood_pressure.jpg" class="center">
+          Resting blood pressure is when heart is rest, between beats that blood pressure falls 
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          Sex
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/sex.jpg" class="center">
+          Sex is gender identity
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          Slope of the Peak Exercise ST Segment
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/slope.jpg" class="center">
+          The slope of the peak exercise ST segment 
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          Thalassemia
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/thalassemia.jpg" class="center">
+          An inherited blood disorder characterized by the formation of abnormal form of hemoglobin. It causes tiredness, yellowish skin, dark urine, abdominal swelling and facial bone deformities.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">
+          Vessels Colored by Flourosopy
+        </h3>
+        <p class="faq-text">
+          <img src="../static/images/vessels_colored_by_flourosopy.jpg" class="center">
+          Number of vessels colored by flourosopy 
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+    </div>
+    <script>
+      
+
+    const toggles = document.querySelectorAll('.faq-toggle')
+    
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            toggle.parentNode.classList.toggle('active')
+        })
+    })
+ 
+    </script>
+    </body>
+
+</html>

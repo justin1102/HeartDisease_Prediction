@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../static/css/about_us.css">
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+
+
+  </head>
+  <body>
+    <div class="header">
+			<nav>
+			  <span class="logo"><a href="{{ url_for('predict_page') }}">Heart Disease Test</a></span>
+			  <ul class="nav-links">
+				<li><a href="{{ url_for('about_us') }}">About Us</a></li>
+				<li><a href="{{ url_for('graph_page') }}">Graph</a></li>
+				<li class="btn"><a href="{{ url_for('home') }}">Log Out</a></li>
+			  </ul>
+			</nav>
+		  </div>
+
+      <div class="about-section">
+        <div class="inner-width">
+          <h1>About Us</h1>
+          <div class="border"></div>
+          <div class="about-section-row">
+            <div class="about-section-col">
+              <div class="about">
+                <p>
+                  Due to the fact that heart disease causes the <b>most deaths worldwide</b>, 
+                  this heart disease prediction system will <b>predict</b> the heart disease from the input value.
+                  In this system, Machine Learning (ML) algorithms play an important role when predicting heart disease
+                  such as Random Forest, Gradient Boosting, Decision Tree, SVM, KNeartestNeigbor, GaussianNB and LogisticRegression.
+                </p>
+                <a href="{{ url_for('predict_page') }}">Predict Now</a>
+              </div>
+            </div>
+
+            <div class="about-section-col">
+              <div class="skills">
+                <div class="skill">
+                  <div class="title">Random Forest</div>
+                  <div class="progress">
+                    <div class="progress-bar p1"><span>99.7%</span></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="title">Gradient Boosting</div>
+                  <div class="progress">
+                    <div class="progress-bar p2"><span>99.2%</span></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="title">Decision Tree</div>
+                  <div class="progress">
+                    <div class="progress-bar p3"><span>98%</span></div>
+                  </div>
+                </div>
+
+            <div class="skill">
+              <div class="title">SVM</div>
+              <div class="progress">
+                <div class="progress-bar p4"><span>98%</span></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="title">KNeartestNeigbor</div>
+              <div class="progress">
+                <div class="progress-bar p5"><span>89.2%</span></div>
+                  </div>
+                </div>
+
+        <div class="skill">
+          <div class="title">Logistic Regression</div>
+          <div class="progress">
+            <div class="progress-bar p6"><span>83.4%</span></div>
+                  </div>
+                </div>
+
+    <div class="skill">
+      <div class="title">GaussianNB</div>
+      <div class="progress">
+        <div class="progress-bar p7"><span>68.3%</span></div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+</div>
+      </div>
+        </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='css/index.css') }}">
+
+
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="outer">
+                <div class="details">
+                    <h1>Heart Disease Prediction System</h1>
+                     <h2 class="footer">
+                        Backend - <a><i style="font-size:24px" class="fa">&#xf09b;</i> Justin Tham Jia Wei</a> | <a href="https://github.com/justin1102/FYP-BackEnd.git">Source code</a>
+                    </h2>
+                     <h2 class="footer">
+                        Frontend - <a><i class="fa fa-github"></i> Justin Tham Jia Wei</a> | <a href="https://github.com/justin1102/FYP-FrontEnd.git">Source code</a>
+                     </h2>
+                     <h2>
+                        <span><a href="{{ url_for('login') }}"><button>Predict</button></a></span>
+                     </h2>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+
+
