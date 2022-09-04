@@ -11,9 +11,6 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 import os
-from firebase import firebase
-
-firebase = firebase.FirebaseApplication('https://hd-login-14e7a-default-rtdb.firebaseio.com/', None)
 
 app = Flask(__name__)
 
@@ -38,8 +35,8 @@ def get_algorithm(x):
 def send_email(email):
 
     # Define email sender and receiver
-    email_sender = 'justforfunpls0987654321@gmail.com'
-    email_password = "jqdvpvqwzwimxwzb"
+    email_sender = 'justintham2001@gmail.com'
+    email_password = "qanzznlkfcedvmvs"
     email_receiver = email
     # Set the subject and body of the email
     subject = 'Check out my new video!'
