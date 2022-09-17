@@ -32,56 +32,6 @@ def get_algorithm(x):
         model = pickle.load(open('../HeartDisease/algorithm/model_gnb.pkl', 'rb'))
     return model
 
-def send_email(email):
-
-    # # Define email sender and receiver
-    # email_sender = 'justintham2001@gmail.com'
-    # email_password = "qanzznlkfcedvmvs"
-    # email_receiver = email
-    # # Set the subject and body of the email
-    # subject = 'Check out my new video!'
-    # body = """
-    # This is the video link
-    # """
-    # em = EmailMessage()
-    # em['From'] = email_sender
-    # em['To'] = email_receiver
-    # em['Subject'] = subject
-    # em.set_content(body)
-
-    # # Add SSL (layer of security)
-    # context = ssl.create_default_context()
-    # # Log in and send the email
-    # with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
-    #     smtp.login(email_sender, email_password)
-    #     smtp.sendmail(email_sender, email_receiver, em.as_string())
-
-    gmail_user = 'justintham2001@gmail.com'
-    gmail_password = 'qanzznlkfcedvmvs'
-
-    sent_from = gmail_user
-    to = email
-    subject = 'OMG Super Important Message'
-    body = 'Hey, what You'
-
-    email_text = """\
-    From: %s
-    To: %s
-    Subject: %s
-
-    %s
-    """ % (sent_from, ", ".join(to), subject, body)
-
-    try:
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.ehlo()
-        server.login(gmail_user, gmail_password)
-        server.sendmail(sent_from, to, email_text)
-        server.close()
-
-        print('EMAIL SNET...')
-    except:
-        print('Something went wrong...')
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -94,23 +44,9 @@ def home():
 
 @app.route("/login_page", methods=['GET', 'POST'])
 def login():
-    if request.method == "POST":
-        email = request.form.get("email")
-        # data =  { 'Name': email}
-        # firebase.post('/python-example-f6d0b/Students/',data)
-        return redirect(f"/success/{email}")
-        # return render_template('main.html')
     return render_template('login.html')
 
-    
-@app.route('/success/<email>')
-def success(email):
-    # if request.method == "POST":
-    #     send_email(email2)
-    #     return redirect(url_for('predict'))
-    # return render_template('main.html')
-    send_email(email)
-    return render_template('main.html')
+
 
 @app.route("/about_us_page", methods=['GET', 'POST'])
 def about_us():
